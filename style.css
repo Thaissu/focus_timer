@@ -1,0 +1,111 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+:root{
+  --base-color:33;
+
+  --bg-color: #ffff;
+  --text-color:hsl(var(--base-color), 6%, 21%);
+  --bg-color-select:#02799D;
+  --bg-color-controls:hsl(var(--base-color), 9%, 89%);
+  font-size: 62.54%;
+}
+
+.rain svg path{
+  fill:#ffff;
+}
+
+.coffeeshop svg path,
+.firecrackling svg path,
+.florest svg path,
+.pause svg path,
+.rewind svg path{
+  fill: var(--text-color);
+
+}
+
+body{
+  background-color: var(--bg-color);
+  color:var(--text-color);
+  display: flex;
+  min-height: 100vh;
+ }
+
+.hide{
+display: none;
+}
+
+.sound{
+  background-color: var(--bg-color-controls);
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+  margin: 3.2rem;
+  cursor: pointer;
+  transition: .3s;
+}
+.sound:hover, .sound.active {
+  background: var(--bg-color-select);
+}
+.sound:hover svg path, .sound.active svg path{
+  fill:antiquewhite
+}
+.rain{
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+  background: var(--bg-color-select);
+  margin: 3.2rem;
+}
+
+
+#controls{
+background: transparent;
+display: flex;
+}
+
+.stop {
+  margin:4rem;
+}
+.removeFive{
+  margin:4rem;
+}
+
+main{
+  padding-left:23.3rem;
+  padding-right: 19.2rem;
+  align-self:center;
+  justify-self: center;
+  
+  }
+
+#sounds{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self:center;
+  justify-content:center;
+  place-content: center;
+  width: 30.8rem;
+  height: 33.6rem;
+  gap:.2rem;
+  
+}
+
+button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+
+
+#timer{
+  font-family: 'Roboto', sans-serif;
+  font-size: 12.6rem;
+  color: var(--text-color);
+  display: flex;
+  cursor: pointer;
+}
